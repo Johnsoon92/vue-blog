@@ -17,8 +17,8 @@
   }
 </script>
 
-<style lang="scss" rel="stylesheet/scss" scoped>
+<style lang="scss" rel="stylesheet/scss">
   .app-head {
-
+    background-color: yellow;
   }
 </style>

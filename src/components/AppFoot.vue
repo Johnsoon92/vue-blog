@@ -19,6 +19,6 @@
 
 <style lang="scss" rel="stylesheet/scss" scoped>
   .app-foot {
-
+    background-color: black;
   }
 </style>

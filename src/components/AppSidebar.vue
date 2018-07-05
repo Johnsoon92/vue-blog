@@ -19,6 +19,8 @@
 
 <style lang="scss" rel="stylesheet/scss" scoped>
   .app-sidebar {
-
+    background-color: lightblue;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
   }
 </style>

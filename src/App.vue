@@ -1,11 +1,13 @@
 <template>
-  <div id="app">
+  <div class="app">
     <!--顶栏-->
     <AppHead></AppHead>
     <!--侧边栏-->
     <AppSidebar></AppSidebar>
     <!--页面主体-->
-    <router-view></router-view>
+    <div class="app-content">
+      <router-view></router-view>
+    </div>
     <!--底栏-->
     <AppFoot></AppFoot>
   </div>
@@ -29,14 +31,36 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" rel="stylesheet/scss">
 @import "assets/common.scss";
-#app {
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  position: relative;
+  max-height: 9999px;
+}
+.app-head {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: blue;
+}
+.app-sidebar {
+  float: left;
+  width: 200px;
+}
+.app-content {
+  margin-top: 80px;
+  margin-left: 200px;
+}
+.app-foot {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
 }
 </style>
