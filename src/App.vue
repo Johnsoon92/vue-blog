@@ -25,6 +25,11 @@ export default {
     AppSidebar,
     AppFoot,
   },
+  data() {
+    return {
+
+    }
+  },
   created() {
 
   },
@@ -37,17 +42,14 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   position: relative;
-  max-height: 9999px;
 }
-.app-head {
+.app-head-b {
   position: fixed;
   z-index: 10;
   top: 0;
   width: 100%;
   height: 80px;
-  background-color: blue;
 }
 .app-sidebar {
   float: left;

@@ -1,14 +1,23 @@
 <template>
-  <div class="app-sidebar">
+  <b-nav class="app-sidebar">
+    <b-nav-item>
+
+    </b-nav-item>
     {{message}}
-  </div>
+  </b-nav>
 </template>
 
 <script type="text/javascript">
   export default {
     data() {
       return {
-        message: 'AppSidebar'
+        message: 'AppSidebar',
+        pages: [
+          {
+            name: '',
+            route: '',
+          }
+        ]
       }
     },
     methods: {
