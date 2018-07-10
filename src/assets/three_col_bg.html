@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .container {
+                margin: 0 auto;
+                width: 960px;
+
+                background: url("tri_bg.gif") repeat-y;
+            }
+
+            .left {
+                float: left;
+                width: 220px;
+            }
+
+            .content {
+                float: left;
+                width: 480px;
+            }
+
+            .right {
+                float: left;
+                width: 220px;
+            }
+
+            .clearfix {
+                overflow: auto;
+                
+                zoom: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container clearfix">
+            <div class="left">left</div>	
+            <div class="content">content<br/>content</div>	
+            <div class="right">right</div>	
+        </div>
+    </body>
+</html>

@@ -2,14 +2,16 @@
   <div class="app">
     <!--顶栏-->
     <AppHead></AppHead>
-    <!--侧边栏-->
-    <AppSidebar></AppSidebar>
-    <!--页面主体-->
-    <div class="app-content">
-      <router-view></router-view>
+    <div style="margin-top: 56px;">
+      <!--侧边栏-->
+      <AppSidebar></AppSidebar>
+      <!--页面主体-->
+      <div class="app-content">
+        <router-view></router-view>
+      </div>
     </div>
     <!--底栏-->
-    <AppFoot></AppFoot>
+    <!-- <AppFoot></AppFoot> -->
   </div>
 </template>
 
@@ -56,7 +58,6 @@ export default {
   width: 200px;
 }
 .app-content {
-  margin-top: 80px;
   margin-left: 200px;
 }
 .app-foot {

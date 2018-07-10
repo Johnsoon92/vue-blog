@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .right-wrap {
+                float: left;
+                overflow: hidden;
+
+                position: relative;
+
+                width: 100%;
+
+                background: green;	
+            }
+
+            .content-wrap {
+                float: left;
+
+                position: relative;
+                right: 30%; /* 此值等于rightSideBar的宽度 */
+
+                width: 100%;
+
+                background: orange;
+            }
+
+            .left-wrap {
+                float: left;
+
+                position: relative;
+                right: 40%; /* 此值等于content的宽度 */
+
+                width: 100%;
+
+                background: lime;
+            }
+
+            #leftSideBar {
+                float: left;
+                overflow: hidden;
+
+                position: relative;
+                left: 72%; /* 距左边增加了30%加40%加一个2%的padding */
+
+                width: 26%; /* 增加了2%的padding，所以宽度小了4% */
+            }
+
+            #content {
+                float: left;
+                overflow: hidden;
+
+                position: relative;
+                left: 76%; /* 距左边增加了30%加40%加三个2%的padding */
+
+                width: 36%; /* 增加了2%的padding，所以宽度小了4% */
+            }
+
+            #rightSideBar {
+                float: left;
+                overflow: hidden;
+
+                position: relative;
+                left: 80%; /* 距左边增加了30%加40%加五个2%的padding */
+
+                width: 26%; /* 增加了2%的padding，所以宽度小了4% */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="right-wrap">
+            <div class="content-wrap">
+                <div class="left-wrap">
+                    <div id="leftSideBar">leftSideBar
+                    </div>
+                    <div id="content">content<br/>content
+                    </div>
+                    <div id="rightSideBar">rightSideBar
+                    </div>
+                </div>
+            </div>
+        </div>	
+    </body>
+</html>

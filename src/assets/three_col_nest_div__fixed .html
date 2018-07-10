@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            .container {
+                margin: 0 auto;
+                width: 960px;
+            }
+
+            .right-wrap {
+                float: left;
+                overflow: hidden;
+
+                position: relative;
+
+                width: 100%;
+
+                background: green;
+            }
+
+            .content-wrap {
+                float: left;
+
+                position: relative;
+                right: 320px; /* 此值等于rightSideBar的宽度 */
+
+                width: 100%;
+
+                background: orange;
+            }
+
+            .left-wrap {
+                float: left;
+
+                position: relative;
+                right: 420px; /* 此值等于content的宽度 */
+
+                width: 100%;
+
+                background: lime;
+            }
+
+            #leftSideBar {
+                float: left;
+                overflow: hidden;
+
+                position: relative;
+                left: 740px;
+
+                width: 220px;
+            }
+
+            #content {
+                float: left;
+                overflow: hidden;
+
+                position: relative;
+                left: 740px;
+
+                width: 420px;
+            }
+
+            #rightSideBar {
+                float: left;
+                overflow: hidden;
+
+                position: relative;
+                left: 740px;
+
+                width: 320px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="right-wrap">
+                <div class="content-wrap">
+                    <div class="left-wrap">
+                        <div id="leftSideBar">leftSideBar
+                        </div>
+                        <div id="content">content<br/>content
+                        </div>
+                        <div id="rightSideBar">rightSideBar
+                        </div>
+                    </div>
+                </div>	
+            </div>	
+        </div>
+    </body>
+</html>

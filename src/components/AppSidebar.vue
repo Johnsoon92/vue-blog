@@ -1,10 +1,7 @@
 <template>
-  <b-nav class="app-sidebar">
-    <b-nav-item>
-
-    </b-nav-item>
+  <div class="app-sidebar">
     {{message}}
-  </b-nav>
+  </div>
 </template>
 
 <script type="text/javascript">
