@@ -1,10 +1,10 @@
 <template>
   <div class="app">
     <!--顶栏-->
-    <AppHead></AppHead>
+    <AppHead :menus="headMenus"></AppHead>
     <div style="margin-top: 56px;">
       <!--侧边栏-->
-      <AppSidebar></AppSidebar>
+      <AppSidebar :menus="sideMenus"></AppSidebar>
       <!--页面主体-->
       <div class="app-content">
         <router-view></router-view>
@@ -19,6 +19,7 @@
 import AppHead from '@/components/AppHead'
 import AppSidebar from '@/components/AppSidebar'
 import AppFoot from '@/components/AppFoot'
+import {mapState, mapActions} from 'vuex'
 
 export default {
   name: 'App',
@@ -33,7 +34,20 @@ export default {
     }
   },
   created() {
-
+    this.getUserInfo()
+    this.getUserMenu()
+  },
+  computed: {
+    ...mapState({
+      headMenus: state => state.nav.headMenus,
+      sideMenus: state => state.nav.sideMenus,
+    }),
+  },
+  methods: {
+    ...mapActions({
+      getUserInfo: 'getUserInfo',
+      getUserMenu: 'getUserMenu',
+    }),
   },
 }
 </script>
