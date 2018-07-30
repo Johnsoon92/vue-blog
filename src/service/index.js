@@ -33,6 +33,18 @@ export const getUserMenu = () => {
                   menuId: '0-1-0',
                   menuName: 'triangle',
                   index: 'triangle',
+                },
+                {
+                  menuId: '0-1-1',
+                  menuName: 'doublewinglayout',
+                  index: 'doublewinglayout',
+                  children: [
+                    {
+                      menuId: '0-1-1-0',
+                      menuName: 'doublewinglayout1',
+                      index: 'doublewinglayout1',
+                    }
+                  ],
                 }
               ]
             },

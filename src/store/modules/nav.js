@@ -1,13 +1,26 @@
 // 状态
 const state = {
     headMenus: [],
-    headIndex: 0,
+    headIndex: '',
 }
 
 // 通常，在getters中设置计算属性
 const getters = {
   sideMenus(state) {
-    return state.headMenus && state.headMenus.length ? state.headMenus[state.headIndex].children : []
+    let sideMenus = []
+    state.headMenus.forEach(menu => {
+      if (menu.index === state.headIndex) {
+        sideMenus = menu.children
+      }
+      if (menu.children && menu.children.length) {
+        menu.children.forEach(submenu => {
+          if (submenu.index === state.headIndex) {
+            sideMenus = submenu.children
+          }
+        })
+      }
+    })
+    return sideMenus
   },
 }
 
@@ -16,12 +29,18 @@ const actions = {
   setHeadMenus({commit}, menus) {
     commit('setHeadMenus', menus)
   },
+  setHeadIndex({commit}, headIndex) {
+    commit('setHeadIndex', headIndex)
+  },
 }
 
 // 变更
 const mutations = {
   setHeadMenus(state, menus) {
     state.headMenus = menus
+  },
+  setHeadIndex(state, headIndex) {
+    state.headIndex = headIndex
   },
 }
 

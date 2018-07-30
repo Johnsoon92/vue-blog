@@ -12,6 +12,7 @@
     </div>
     <!--底栏-->
     <!-- <AppFoot></AppFoot> -->
+    <draggable></draggable>
   </div>
 </template>
 
@@ -19,7 +20,8 @@
 import AppHead from '@/components/AppHead'
 import AppSidebar from '@/components/AppSidebar'
 import AppFoot from '@/components/AppFoot'
-import {mapState, mapActions} from 'vuex'
+import {mapState, mapGetters, mapActions} from 'vuex'
+import draggable from 'vuedraggable'
 
 export default {
   name: 'App',
@@ -27,21 +29,19 @@ export default {
     AppHead,
     AppSidebar,
     AppFoot,
-  },
-  data() {
-    return {
-
-    }
-  },
-  created() {
-    this.getUserInfo()
-    this.getUserMenu()
+    draggable,
   },
   computed: {
     ...mapState({
       headMenus: state => state.nav.headMenus,
-      sideMenus: state => state.nav.sideMenus,
     }),
+    ...mapGetters({
+      sideMenus: 'sideMenus',
+    }),
+  },
+  created() {
+    this.getUserInfo()
+    this.getUserMenu()
   },
   methods: {
     ...mapActions({

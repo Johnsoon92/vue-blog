@@ -68,7 +68,13 @@ export default new Router({
               name: 'triangle',
               component: triangle,
               meta: {title: 'Triangle implemented by pure CSS - Blog of Sean John'}
-            }
+            },
+            {
+              path: 'doublewinglayout',
+              name: 'doublewinglayout',
+              component: triangle,
+              meta: {title: 'doublewinglayout - Blog of Sean John'}
+            },
           ]
         },
       ]

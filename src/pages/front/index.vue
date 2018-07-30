@@ -1,6 +1,7 @@
 <template>
   <div class="page-wrapper">
     {{message}}
+    <router-view></router-view>
   </div>
 </template>
 
