@@ -1,12 +1,12 @@
 <template>
-  <DoubleWingLayout>
-    <div slot="middle" style="margin-right:10px;background-color:#f00;">
+  <DoubleWingLayout max-width="1024px">
+    <div slot="middle" style="background-color:#c3d1de;text-align:center;">
       middle
     </div>
-    <div slot="left" style="margin-right:10px;background-color:#0f0;">
+    <div slot="left" style="background-color:#6ac580;text-align:center;">
       left
     </div>
-    <div slot="right" style="margin-right:10px;background-color:#00f;">
+    <div slot="right" style="background-color:#41474c;color:#fff;text-align:center;">
       right
     </div>
   </DoubleWingLayout>
@@ -18,9 +18,6 @@
   export default {
     components: {
       DoubleWingLayout
-    },
-    methods: {
-
     },
   }
 </script>

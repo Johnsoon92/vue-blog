@@ -18,6 +18,10 @@
   export default {
     name: 'DoubleWingLayout',
     props: {
+      maxWidth: {
+        type: String,
+        default: () => '100%'
+      },
       leftWidth: {
         type: String,
         default: () => '200px'
@@ -32,13 +36,17 @@
         return {
           overflow: 'hidden',
           padding: `0 ${this.leftWidth}`,
+          minWidth: 2 * parseInt(this.leftWidth, 10) + parseInt(this.rightWidth, 10) + 'px',
           height: '100%',
+          margin: '0 auto',
+          maxWidth: this.maxWidth,
         }
       },
       middleStyle() {
         return {
           float: 'left',
           width: '100%',
+          minWidth: this.leftWidth,
           height: '100%',
         }
       },
@@ -47,7 +55,7 @@
           float: 'left',
           position: 'relative',
           left: `-${this.leftWidth}`,
-          'margin-left': '-100%',
+          marginLeft: '-100%',
           width: this.leftWidth,
           height: '100%',
         }
@@ -57,7 +65,7 @@
           float: 'left',
           position: 'relative',
           right: `-${this.rightWidth}`,
-          'margin-left': `-${this.rightWidth}`,
+          marginLeft: `-${this.rightWidth}`,
           width: this.rightWidth,
           height: '100%',
         }
