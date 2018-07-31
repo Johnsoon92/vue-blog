@@ -1,8 +1,8 @@
 <template>
-  <div class="app">
+  <div id="app">
     <!--顶栏-->
     <AppHead :menus="headMenus"></AppHead>
-    <div style="margin-top: 56px;">
+    <div style="margin-top: 56px; height: 100%;">
       <!--侧边栏-->
       <AppSidebar :menus="sideMenus"></AppSidebar>
       <!--页面主体-->
@@ -54,18 +54,11 @@ export default {
 
 <style lang="scss" rel="stylesheet/scss">
 @import "assets/common.scss";
-.app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+#app {
+  height: 100%;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
-}
-.app-head-b {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  width: 100%;
-  height: 80px;
 }
 .app-sidebar {
   float: left;
@@ -73,6 +66,7 @@ export default {
 }
 .app-content {
   margin-left: 200px;
+  height: 100%;
 }
 .app-foot {
   position: absolute;

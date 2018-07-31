@@ -1,9 +1,10 @@
 <template>
-  <span :style="iconStyle"></span>
+  <span :style="iconStyle" class="icon-triangle"></span>
 </template>
 
 <script type="text/javascript">
   export default {
+    name: 'IconTriangle',
     props: {
       width: {
         type: String,
@@ -44,16 +45,5 @@
 </script>
 <style lang="scss">
   .icon-triangle {
-    display: inline-block;
-    border-bottom: 1px solid;
-    border-right: 1px solid;
-    width: 12px;
-    height: 12px;
-
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
+  }
 </style>

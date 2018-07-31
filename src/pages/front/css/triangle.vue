@@ -1,5 +1,5 @@
 <template>
-  <div class="home-page">
+  <div class="page-triangle">
     <h2>Implement a triangle using pure css.</h2>
     <div class="center">
       You will see a triagnle after this word.
@@ -15,36 +15,13 @@
   import IconTriangle from '@/components/IconTriangle'
 
   export default {
-    name: 'HomePage',
     components: {
       IconTriangle
-    },
-    data() {
-      return {
-        message: 'hello'
-      }
-    },
-    methods: {
-
     },
   }
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-  .home-page {
-    height: 600px;
-    width: 100%;
-    h2 {
-      border-bottom: 1px solid #ccc;
-      width: 400px;
-    }
-    .center {
-      position: fixed;
-      background-color: blue;
-      width: 300px;
-      height: 200px;
-      top: (50vh -100px);
-      left: (50vw -150px);
-    }
+  .page-triangle{
   }
 </style>

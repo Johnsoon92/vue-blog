@@ -13,6 +13,7 @@ const css = () => import(/* webpackChunkName: 'front' */'@/pages/front/css/index
 const java = () => import(/* webpackChunkName: 'backend' */'@/pages/backend/java/index')
 // css pages
 const triangle = () => import(/* webpackChunkName: 'css' */'@/pages/front/css/triangle')
+const doublewinglayout = () => import(/* webpackChunkName: 'css' */'@/pages/front/css/doublewinglayout')
 
 
 
@@ -72,7 +73,7 @@ export default new Router({
             {
               path: 'doublewinglayout',
               name: 'doublewinglayout',
-              component: triangle,
+              component: doublewinglayout,
               meta: {title: 'doublewinglayout - Blog of Sean John'}
             },
           ]
